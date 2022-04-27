@@ -1,0 +1,104 @@
+<!--<form [formGroup]="loginForm" (submit)="onSubmit()">-->
+<!--  <label>username </label>-->
+<!--  <input formControlName="username" type="text"><br>-->
+
+<!--    <label>password </label>-->
+<!--  <input formControlName="password" type="text"><br>-->
+
+<!--  <input type="submit">-->
+<!--</form>-->
+
+<!--<ngb-alert [type]="'danger'" [dismissible]="false" *ngIf="error">-->
+<!--  <div class="alert-body">-->
+<!--    <p>{{ error }}</p>-->
+<!--  </div>-->
+<!--</ngb-alert>-->
+
+<!--<div fxLayout="row" fxLayoutAlign="center center" class="login-main">-->
+<!--  <mat-card >-->
+<!--    <mat-card-header>-->
+<!--      <mat-card-title>Login Page</mat-card-title>-->
+<!--    </mat-card-header>-->
+<!--    <form class="my-form" [formGroup]="loginForm" (submit)="onSubmit()">-->
+<!--      <mat-card-content fxLayout="column">-->
+<!--        <mat-form-field>-->
+<!--          <input matInput placeholder="Email" formControlName="username">-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field>-->
+<!--          <input type="password" matInput placeholder="password" formControlName="password">-->
+<!--        </mat-form-field>-->
+<!--      </mat-card-content>-->
+<!--      <mat-card-actions align="end">-->
+<!--        <button mat-raised-button type="submit" color="primary">Login</button>-->
+<!--      </mat-card-actions>-->
+<!--    </form>-->
+<!--    <p class="text-center mt-2">-->
+<!--      <span>New to EDUS?</span>-->
+<!--      <a routerLink="/auth/register"><span>&nbsp;Create an account</span></a>-->
+<!--    </p>-->
+<!--  </mat-card>-->
+<!--</div>-->
+
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper">
+    <div class="content-header row">
+    </div>
+    <div class="content-body">
+      <div class="auth-wrapper auth-cover">
+        <div class="auth-inner row m-0">
+          <!-- Brand logo--><a class="brand-logo" href="index.html">
+          <img src="{{ logo }}" alt="brand-logo" height="78" />
+
+        </a>
+          <!-- /Brand logo-->
+          <!-- Left Text-->
+          <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
+            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="/assets/app-assets/images/pages/login-v2.svg" alt="Login V2" /></div>
+          </div>
+          <!-- /Left Text-->
+          <!-- Login-->
+          <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
+              <h2 class="card-title fw-bold mb-1">Welcome to EDUS! 👋</h2>
+              <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
+
+              <ngb-alert [type]="'danger'" [dismissible]="false" *ngIf="error">
+                <div class="alert-body">
+                  <p>{{ error }}</p>
+                </div>
+              </ngb-alert>
+
+              <form class="auth-login-form mt-2" [formGroup]="loginForm" (submit)="onSubmit()">
+                <div class="mb-1">
+                  <label class="form-label" for="login-email">Email</label>
+                  <input class="form-control" formControlName="username" id="login-email" type="text" name="login-email" placeholder="john@example.com" aria-describedby="login-email" autofocus="" tabindex="1" />
+                </div>
+                <div class="mb-1">
+                  <div class="d-flex justify-content-between">
+                    <label class="form-label" for="login-password">Password</label><a href="auth-forgot-password-cover.html"><small>Forgot Password?</small></a>
+                  </div>
+                  <div class="input-group input-group-merge form-password-toggle">
+                    <input class="form-control form-control-merge"  formControlName="password" id="login-password" type="password" name="login-password" placeholder="············" aria-describedby="login-password" tabindex="2" /><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                  </div>
+                </div>
+                <div class="mb-1">
+                  <div class="form-check">
+                    <input class="form-check-input" id="remember-me" type="checkbox" tabindex="3" />
+                    <label class="form-check-label" for="remember-me"> Remember Me</label>
+                  </div>
+                </div>
+                <button [disabled]="loading" class="btn btn-primary w-100" tabindex="4" rippleEffect>
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>  Sign in
+                </button>
+              </form>
+              <p class="text-center mt-2"><span>New on our platform?</span><a href="auth-register-cover.html"><span>&nbsp;Create an account</span></a></p>
+            </div>
+          </div>
+          <!-- /Login-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

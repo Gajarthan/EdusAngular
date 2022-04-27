@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'http://localhost:8000/api',
+  app: {
+    appName     : 'EDUS',                                        // App Name
+    appTitle    : 'EDUS', // App Title
+    appLogoImage: 'assets/images/logo/logo.svg',                  // App Logo
+    appLanguage : 'en',                                           // App Default Language (en, fr, de, pt etc..)
+  }
 };
 
 /*

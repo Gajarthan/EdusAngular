@@ -19,10 +19,10 @@ const routes: Routes = [
         component:RegisterComponent
       }]
   },
-  {
-    path: '',
-    redirectTo: '/home'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: '/home'
+  // },
   {
     path: 'home',
     component: HomeComponent,

@@ -1,5 +1,3 @@
-import { CoreConfig } from '@core/types';
-
 /**
  * Default App Config
  *
@@ -12,6 +10,8 @@ import { CoreConfig } from '@core/types';
  *  ! Otherwise, it will not take the below config changes and use stored config from local storage.
  *
  */
+import {CoreConfig} from "./@core/types";
+
 
 // prettier-ignore
 export const coreConfig: CoreConfig = {
